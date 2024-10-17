@@ -1,0 +1,13 @@
+<html>
+<head></head>
+<body>
+<table>
+    <tr><td>id</td><td>title</td><td>author name</td></tr>
+    <tr {% for book in books %}>
+        <td>{{ book.id }}</td>
+        <td>{{ book.title }}</td>
+        <td>{{ book.author.name }}</td>
+    </tr {% endfor %}>
+</table>
+</body>
+</html>
