@@ -29,7 +29,8 @@ class CrudAuthorController extends AbstractController
     #[Route('/list', name: 'app_list_author')]
     public function list(AuthorRepository $repository): Response
     {
-        $list=$repository->findAll();
+        //$list=$repository->findAll();
+        $list=$repository->myFindAll(1);
         return $this->render('crud_author/list.html.twig',
         ['list'=>$list]);
     }
